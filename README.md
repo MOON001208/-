@@ -141,7 +141,7 @@ GitHub Actions는 코드를 자동으로 실행해주는 GitHub의 무료 기능
 |------|-------|
 | `GMAIL_USER` | 내 Gmail 주소 (예: myemail@gmail.com) |
 | `GMAIL_APP_PASSWORD` | 위에서 발급받은 16자리 앱 비밀번호 |
-| `GMAIL_TO` | 받을 이메일 주소 (아래 참고) |
+| `GMAIL_TO` | 전체 공고 받을 사람 (선택) |
 
 #### 📧 여러 명에게 동시에 보내기
 `GMAIL_TO`에 콤마(,)로 구분해서 여러 이메일을 등록하면 됩니다!
@@ -150,7 +150,23 @@ GitHub Actions는 코드를 자동으로 실행해주는 GitHub의 무료 기능
 ```
 friend1@gmail.com,friend2@naver.com,studygroup@kakao.com
 ```
-→ 이렇게 하면 3명 모두에게 동시에 이메일이 발송됩니다!
+
+#### 🎯 직군별로 다른 사람에게 보내기 (NEW!)
+각 직군별로 다른 사람에게 공고를 보낼 수 있습니다!
+
+| Secret Name | 설명 | 예시 |
+|-------------|------|------|
+| `GMAIL_TO_DATA` | **데이터** 직군 공고만 받을 사람 | `data_friend@gmail.com` |
+| `GMAIL_TO_ACCOUNTING` | **회계** 직군 공고만 받을 사람 | `accounting_friend@gmail.com` |
+| `GMAIL_TO_HR` | **인사** 직군 공고만 받을 사람 | `hr_friend@gmail.com` |
+| `GMAIL_TO` | **전체** 공고 받을 사람 | `me@gmail.com` |
+
+**사용 예시:**
+- 나는 데이터 취준생 → `GMAIL_TO_DATA`에 내 이메일
+- 친구 A는 회계 취준생 → `GMAIL_TO_ACCOUNTING`에 친구 A 이메일  
+- 친구 B는 인사 취준생 → `GMAIL_TO_HR`에 친구 B 이메일
+
+→ 각자 **본인 관심 분야의 공고만** 받아볼 수 있습니다! 🎉
 
 ---
 
