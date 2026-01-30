@@ -1,0 +1,43 @@
+name: Daily Job Scout
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day (09:00 KST)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows manual trigger button
+
+permissions:
+  contents: write
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Run Job Scout
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+      run: |
+        python src/main.py
+        
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'Job Scout Bot'
+        git config --global user.email 'bot@noreply.github.com'
+        git add docs/jobs.json
+        git commit -m "Update daily jobs data [skip ci]" || exit 0
+        git push

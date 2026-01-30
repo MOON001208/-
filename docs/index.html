@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Scout Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        async function loadJobs() {
+            try {
+                const response = await fetch('jobs.json');
+                const jobs = await response.json();
+                renderJobs(jobs);
+            } catch (e) {
+                console.error("Failed to load jobs", e);
+                document.getElementById('job-list').innerHTML = `<p class="text-red-500">데이터를 불러오는데 실패했습니다: ${e}</p>`;
+            }
+        }
+
+        function renderJobs(jobs) {
+            const list = document.getElementById('job-list');
+            list.innerHTML = '';
+            
+            jobs.forEach(job => {
+                const isDeadline = checkDeadline(job.deadline);
+                const isNew = job.is_new;
+                
+                const card = document.createElement('div');
+                card.className = `bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border-l-4 ${isDeadline ? 'border-red-500' : (isNew ? 'border-green-500' : 'border-gray-200')}`;
+                
+                let badges = '';
+                if (isDeadline) badges += `<span class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">오늘 마감</span>`;
+                if (isNew) badges += `<span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">신규</span>`;
+                
+                const analysis = job.ai_analysis || {};
+                const strategy = analysis.cover_letter_strategy || "분석 대기 중...";
+                
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            ${badges}
+                            <h2 class="text-xl font-bold text-gray-900 mt-2">${job.title}</h2>
+                            <p class="text-gray-600 font-medium">${job.company} | ${job.site}</p>
+                            <p class="text-sm text-gray-400 mt-1">마감일: ${job.deadline}</p>
+                        </div>
+                        <a href="${job.link}" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">공고 보기</a>
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                <span class="text-purple-600">✨ AI 자소서 전략 보기</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="text-gray-600 mt-3 group-open:animate-fadeIn text-sm whitespace-pre-line bg-gray-50 p-3 rounded">
+                                ${typeof strategy === 'string' ? strategy : JSON.stringify(strategy, null, 2)}
+                            </div>
+                        </details>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+        }
+        
+        function checkDeadline(deadlineStr) {
+            // Simple check, robust logic should be in JS date parsing
+            // For now, assuming "Today" logic is handled by backend or we highlight all
+            return false; // Implement JS date check if needed
+        }
+
+        window.onload = loadJobs;
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="max-w-4xl mx-auto py-10 px-4">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Job Scout AI
+            </h1>
+            <p class="text-gray-500 mt-2">매일 아침 배달되는 맞춤형 채용 브리핑</p>
+        </header>
+        
+        <div id="job-list" class="space-y-4">
+            <!-- Jobs will be injected here -->
+            <div class="text-center text-gray-500 py-10">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                <p class="mt-4">데이터 로딩 중...</p>
+            </div>
+        </div>
+        
+        <footer class="mt-12 text-center text-gray-400 text-sm">
+            Automated by Job Scout Serverless
+        </footer>
+    </div>
+</body>
+</html>
