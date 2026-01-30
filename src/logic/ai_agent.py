@@ -15,9 +15,9 @@ class AIAgent:
         if api_key:
             try:
                 genai.configure(api_key=api_key)
-                # gemini-1.5-flash로 변경 (더 빠르고 안정적)
-                self.model = genai.GenerativeModel('gemini-1.5-flash')
-                print("  모델: ✅ gemini-1.5-flash 로드 완료")
+                # gemini-2.0-flash 사용 (최신 안정 버전)
+                self.model = genai.GenerativeModel('gemini-2.0-flash')
+                print("  모델: ✅ gemini-2.0-flash 로드 완료")
             except Exception as e:
                 print(f"  모델 로드 실패: ❌ {e}")
                 self.model = None
