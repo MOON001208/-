@@ -22,7 +22,9 @@ class SaraminScraper:
                     "searchword": keyword,
                     "recruitPage": 1,
                     "recruitSort": "relation",
-                    "recruitPageCount": 20  # Get top 20 relevant
+                    "recruitPageCount": 20,  # Get top 20 relevant
+                    "exp_cd": 1,  # 신입 필터 (1=신입, 2=경력, 3=신입/경력)
+                    "exp_none": 1  # 경력무관도 포함
                 }
                 
                 response = requests.get(self.BASE_URL, params=params, headers=self.headers)
