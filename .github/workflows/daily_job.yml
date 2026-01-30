@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.11'
         
     - name: Install dependencies
       run: |
@@ -28,8 +28,28 @@ jobs:
         
     - name: Run Job Scout
       env:
+        # AI 분석
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        
+        # Slack 알림
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
+        # Gmail 알림 (추가됨!)
+        GMAIL_USER: ${{ secrets.GMAIL_USER }}
+        GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        GMAIL_TO: ${{ secrets.GMAIL_TO }}
+        GMAIL_TO_DATA: ${{ secrets.GMAIL_TO_DATA }}
+        GMAIL_TO_ACCOUNTING: ${{ secrets.GMAIL_TO_ACCOUNTING }}
+        GMAIL_TO_HR: ${{ secrets.GMAIL_TO_HR }}
+        
+        # Discord 알림
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        
+        # Telegram 알림
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        
+        # GitHub 정보
         GITHUB_REPOSITORY: ${{ github.repository }}
       run: |
         python src/main.py
