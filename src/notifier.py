@@ -175,6 +175,15 @@ class Notifier:
         # 카테고리 정보가 있으면 제목에 표시
         subject_prefix = f"[{category_name} 직군]" if category_name else ""
         
+        # 카테고리별 URL 파라미터 추가
+        category_url_map = {
+            "데이터": "data",
+            "회계": "accounting",
+            "인사": "hr"
+        }
+        if category_name and category_name in category_url_map:
+            page_url = f"{page_url}?category={category_url_map[category_name]}"
+        
         # HTML 이메일 본문 생성
         html = f"""
         <html>
