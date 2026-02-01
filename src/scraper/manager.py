@@ -3,7 +3,6 @@ from src.scraper.saramin import SaraminScraper
 from src.scraper.jobkorea import JobKoreaScraper
 from src.scraper.linkareer import LinkareerScraper
 from src.scraper.wanted import WantedScraper
-from src.scraper.incruit import IncruitScraper
 
 class ScraperManager:
     def __init__(self):
@@ -11,8 +10,7 @@ class ScraperManager:
             SaraminScraper(),      # 사람인
             JobKoreaScraper(),     # 잡코리아
             LinkareerScraper(),    # 링커리어
-            WantedScraper(),       # 원티드
-            IncruitScraper()       # 인크루트
+            WantedScraper()        # 원티드
         ]
 
     def run_all(self):
@@ -27,7 +25,7 @@ class ScraperManager:
         targets = list(set(targets))
 
         print(f"🔍 Starting scrape for {len(targets)} keywords across {len(self.scrapers)} sites...")
-        print(f"📍 Sites: 사람인, 잡코리아, 링커리어, 원티드, 인크루트")
+        print(f"📍 Sites: 사람인, 잡코리아, 링커리어, 원티드")
         
         for scraper in self.scrapers:
             scraper_name = scraper.__class__.__name__
