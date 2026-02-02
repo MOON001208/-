@@ -58,11 +58,18 @@ def main():
     print("\n🔍 Checking for expired jobs...")
     all_jobs = DeadlineChecker.filter_active_jobs(all_jobs)
     
-    # Check deadlines on ALL jobs (even old ones)
-    deadline_jobs = DeadlineChecker.get_deadline_day_jobs(all_jobs)
+    all_jobs = DeadlineChecker.filter_active_jobs(all_jobs)
     
-    # Sort: Deadline today first, then Newest scraped
-    all_jobs.sort(key=lambda x: (x.get('deadline') != 'Today', x.get('scraped_at')), reverse=True)
+    # Check deadlines
+    today_deadline_jobs = DeadlineChecker.get_deadline_day_jobs(all_jobs)
+    upcoming_jobs = DeadlineChecker.get_upcoming_deadline_jobs(all_jobs) # 내일 마감 (D-1)
+    
+    # Sort: Deadline Tomorrow (Priority) -> Deadline Today -> Newest
+    all_jobs.sort(key=lambda x: (
+        DeadlineChecker.is_deadline_tomorrow(x.get('deadline', '')),  # 1순위: 내일 마감
+        DeadlineChecker.is_deadline_today(x.get('deadline', '')),     # 2순위: 오늘 마감
+        x.get('scraped_at')                                         # 3순위: 최신순
+    ), reverse=True)
     
     data_manager.save_jobs(all_jobs)
     print("Data saved.")
@@ -72,14 +79,13 @@ def main():
     repo_name = os.getenv("GITHUB_REPOSITORY", "username/repo")
     page_url = f"https://{repo_name.split('/')[0]}.github.io/{repo_name.split('/')[1]}"
     
-    # [TEST MODE] Force send email even if no new jobs
+    # [TEST MODE]
     if len(new_jobs) == 0 and len(all_jobs) > 0:
-        print("📢 [TEST MODE] No new jobs, but sending email with top 5 recent jobs for testing.")
-        # 최근 5개를 강제로 new_jobs로 취급
+        print("📢 [TEST MODE] No new jobs, but sending tailored alerts for testing.")
         test_jobs = all_jobs[:5]
-        notifier.send_all_alerts(test_jobs, deadline_jobs, page_url)
-    elif len(new_jobs) > 0 or len(deadline_jobs) > 0:
-        notifier.send_all_alerts(new_jobs, deadline_jobs, page_url)
+        notifier.send_all_alerts(test_jobs, today_deadline_jobs, upcoming_jobs, page_url)
+    elif len(new_jobs) > 0 or len(today_deadline_jobs) > 0 or len(upcoming_jobs) > 0:
+        notifier.send_all_alerts(new_jobs, today_deadline_jobs, upcoming_jobs, page_url)
     else:
         print("No new jobs and no deadlines. Skipping notification.")
     

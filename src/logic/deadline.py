@@ -61,8 +61,39 @@ class DeadlineChecker:
             return False
             
     @staticmethod
+    def is_deadline_tomorrow(deadline_str):
+        """마감일이 내일인지 확인 (D-1)"""
+        try:
+            today = datetime.now()
+            tomorrow = today + timedelta(days=1)
+            
+            # Clean string
+            clean_date = re.sub(r'[^\d.]', '', deadline_str) 
+            
+            parsed_date = None
+            
+            if clean_date.count('.') == 2:
+                parsed_date = datetime.strptime(clean_date, "%Y.%m.%d")
+            elif clean_date.count('.') == 1:
+                parsed_date = datetime.strptime(clean_date, "%m.%d")
+                parsed_date = parsed_date.replace(year=today.year)
+                
+            if parsed_date:
+                return parsed_date.date() == tomorrow.date()
+                
+            return False
+        except:
+            return False
+
+    @staticmethod
     def get_deadline_day_jobs(jobs):
+        """오늘 마감인 공고 반환"""
         return [job for job in jobs if DeadlineChecker.is_deadline_today(job.get('deadline', ''))]
+
+    @staticmethod
+    def get_upcoming_deadline_jobs(jobs):
+        """내일 마감인 공고 반환 (D-1)"""
+        return [job for job in jobs if DeadlineChecker.is_deadline_tomorrow(job.get('deadline', ''))]
     
     @staticmethod
     def filter_active_jobs(jobs):

@@ -27,34 +27,42 @@ class Notifier:
         print(f"  GMAIL_TO_HR: {'✅' if os.getenv('GMAIL_TO_HR') else '❌'}")
         print("="*50 + "\n")
         
-    def send_all_alerts(self, new_jobs, deadline_jobs, page_url):
+    def send_all_alerts(self, new_jobs, today_jobs, upcoming_jobs, page_url):
         """모든 설정된 알림 채널로 발송"""
         new_jobs_count = len(new_jobs) if isinstance(new_jobs, list) else new_jobs
         
-        print(f"\n📢 [NOTIFIER] 알림 발송 시작 (신규 {new_jobs_count}건, 마감 {len(deadline_jobs)}건)")
+        print(f"\n📢 [NOTIFIER] 알림 발송 시작 (신규 {new_jobs_count}건, 오늘마감 {len(today_jobs)}건, 내일마감 {len(upcoming_jobs)}건)")
         
-        self.send_slack_alert(new_jobs_count, deadline_jobs, page_url)
-        self.send_discord_alert(new_jobs_count, deadline_jobs, page_url)
-        self.send_telegram_alert(new_jobs_count, deadline_jobs, page_url)
+        self.send_slack_alert(new_jobs_count, today_jobs, upcoming_jobs, page_url)
+        self.send_discord_alert(new_jobs_count, today_jobs, upcoming_jobs, page_url)
+        self.send_telegram_alert(new_jobs_count, today_jobs, upcoming_jobs, page_url)
         
         # 카테고리별 이메일 발송
         if isinstance(new_jobs, list):
-            self.send_category_emails(new_jobs, deadline_jobs, page_url)
+            self.send_category_emails(new_jobs, today_jobs, upcoming_jobs, page_url)
         else:
-            self.send_gmail_alert(new_jobs_count, deadline_jobs, page_url, None)
+            self.send_gmail_alert(new_jobs_count, today_jobs, upcoming_jobs, page_url, None)
         
-    def send_slack_alert(self, new_jobs_count, deadline_jobs, page_url):
+    def send_slack_alert(self, new_jobs_count, today_jobs, upcoming_jobs, page_url):
         if not self.slack_url:
             return
 
         message = f"📢 *오늘의 채용 브리핑* 📢\n\n"
         
-        if deadline_jobs:
-            message += f"🚨 *오늘 마감 공고 ({len(deadline_jobs)}건)*\n"
-            for job in deadline_jobs[:3]:
+        # 1. 내일 마감 (가장 중요)
+        if upcoming_jobs:
+            message += f"🔥 *내일 마감! 서두르세요 ({len(upcoming_jobs)}건)*\n"
+            for job in upcoming_jobs[:5]:
                 message += f"• <{job['link']}|{job['title']}> ({job['company']})\n"
-            if len(deadline_jobs) > 3:
-                message += f"• 외 {len(deadline_jobs)-3}건...\n"
+            if len(upcoming_jobs) > 5:
+                message += f"• 외 {len(upcoming_jobs)-5}건...\n"
+            message += "\n"
+
+        # 2. 오늘 마감 (긴급)
+        if today_jobs:
+            message += f"🚨 *오늘 마감 (놓치지 마세요!)*\n"
+            for job in today_jobs[:3]:
+                message += f"• <{job['link']}|{job['title']}> ({job['company']})\n"
             message += "\n"
             
         message += f"✨ *신규 발견 공고:* {new_jobs_count}건\n"
@@ -66,18 +74,22 @@ class Notifier:
         except Exception as e:
             print(f"❌ Slack 발송 실패: {e}")
 
-    def send_discord_alert(self, new_jobs_count, deadline_jobs, page_url):
+    def send_discord_alert(self, new_jobs_count, today_jobs, upcoming_jobs, page_url):
         if not self.discord_url:
             return
 
         message = f"📢 **오늘의 채용 브리핑** 📢\n\n"
         
-        if deadline_jobs:
-            message += f"🚨 **오늘 마감 공고 ({len(deadline_jobs)}건)**\n"
-            for job in deadline_jobs[:3]:
+        if upcoming_jobs:
+            message += f"🔥 **내일 마감! 서두르세요 ({len(upcoming_jobs)}건)**\n"
+            for job in upcoming_jobs[:5]:
                 message += f"• [{job['title']}]({job['link']}) ({job['company']})\n"
-            if len(deadline_jobs) > 3:
-                message += f"• 외 {len(deadline_jobs)-3}건...\n"
+            message += "\n"
+
+        if today_jobs:
+            message += f"🚨 **오늘 마감 ({len(today_jobs)}건)**\n"
+            for job in today_jobs[:3]:
+                message += f"• [{job['title']}]({job['link']}) ({job['company']})\n"
             message += "\n"
             
         message += f"✨ **신규 발견 공고:** {new_jobs_count}건\n"
@@ -89,15 +101,21 @@ class Notifier:
         except Exception as e:
             print(f"❌ Discord 발송 실패: {e}")
 
-    def send_telegram_alert(self, new_jobs_count, deadline_jobs, page_url):
+    def send_telegram_alert(self, new_jobs_count, today_jobs, upcoming_jobs, page_url):
         if not self.telegram_token or not self.telegram_chat_id:
             return
 
         message = f"📢 오늘의 채용 브리핑 📢\n\n"
         
-        if deadline_jobs:
-            message += f"🚨 오늘 마감 공고 ({len(deadline_jobs)}건)\n"
-            for job in deadline_jobs[:3]:
+        if upcoming_jobs:
+            message += f"🔥 내일 마감! ({len(upcoming_jobs)}건)\n"
+            for job in upcoming_jobs[:5]:
+                message += f"• {job['title']} ({job['company']})\n"
+            message += "\n"
+
+        if today_jobs:
+            message += f"🚨 오늘 마감 ({len(today_jobs)}건)\n"
+            for job in today_jobs[:3]:
                 message += f"• {job['title']} ({job['company']})\n"
             message += "\n"
             
@@ -115,7 +133,7 @@ class Notifier:
         except Exception as e:
             print(f"❌ Telegram 발송 실패: {e}")
 
-    def send_category_emails(self, jobs, deadline_jobs, page_url):
+    def send_category_emails(self, jobs, today_jobs, upcoming_jobs, page_url):
         """카테고리별로 다른 사람에게 이메일 발송"""
         if not self.gmail_user or not self.gmail_app_password:
             return
@@ -129,8 +147,6 @@ class Notifier:
         
         for job in jobs:
             keyword = job.get('hidden_keyword', '')
-            
-            # 키워드로 카테고리 판별
             for category, keywords in Config.KEYWORDS.items():
                 if any(kw.lower() in keyword.lower() for kw in keywords):
                     category_jobs[category].append(job)
@@ -139,32 +155,35 @@ class Notifier:
         # 카테고리별 수신자에게 발송
         for category, cat_jobs in category_jobs.items():
             recipients = Config.GMAIL_RECIPIENTS.get(category)
-            if recipients and cat_jobs:
+            if recipients and (cat_jobs or today_jobs or upcoming_jobs):
                 # 해당 카테고리 마감 공고 필터
-                cat_deadline_jobs = [j for j in deadline_jobs if j in cat_jobs]
+                cat_today = [j for j in today_jobs if self._is_in_category(j, category)]
+                cat_upcoming = [j for j in upcoming_jobs if self._is_in_category(j, category)]
                 
-                category_names = {
-                    "Data": "데이터",
-                    "Accounting": "회계",
-                    "HR": "인사"
-                }
+                category_names = {"Data": "데이터", "Accounting": "회계", "HR": "인사"}
                 cat_name = category_names.get(category, category)
                 
                 self.send_gmail_alert(
                     len(cat_jobs), 
-                    cat_deadline_jobs, 
+                    cat_today,
+                    cat_upcoming,
                     page_url, 
                     recipients,
                     category_name=cat_name,
                     category_jobs=cat_jobs
                 )
         
-        # 전체 공고 수신자에게도 발송 (GMAIL_TO)
+        # 전체 공고 수신자
         all_recipients = Config.GMAIL_RECIPIENTS.get("All")
         if all_recipients:
-            self.send_gmail_alert(len(jobs), deadline_jobs, page_url, all_recipients)
+            self.send_gmail_alert(len(jobs), today_jobs, upcoming_jobs, page_url, all_recipients)
 
-    def send_gmail_alert(self, new_jobs_count, deadline_jobs, page_url, recipients=None, category_name=None, category_jobs=None):
+    def _is_in_category(self, job, category):
+        keyword = job.get('hidden_keyword', '')
+        keywords = Config.KEYWORDS.get(category, [])
+        return any(kw.lower() in keyword.lower() for kw in keywords)
+
+    def send_gmail_alert(self, new_jobs_count, today_jobs, upcoming_jobs, page_url, recipients=None, category_name=None, category_jobs=None):
         if not self.gmail_user or not self.gmail_app_password:
             return
         
@@ -191,17 +210,31 @@ class Notifier:
             <h2 style="color: #4F46E5;">📢 오늘의 채용 브리핑 {f"- {category_name} 직군" if category_name else ""}</h2>
         """
         
-        if deadline_jobs:
+        # 1. 내일 마감 (Prioritized)
+        if upcoming_jobs:
             html += f"""
-            <div style="background: #FEE2E2; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                <h3 style="color: #DC2626; margin: 0;">🚨 오늘 마감 공고 ({len(deadline_jobs)}건)</h3>
+            <div style="background: #FEF3C7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h3 style="color: #D97706; margin: 0;">🔥 내일 마감! 서두르세요 ({len(upcoming_jobs)}건)</h3>
                 <ul>
             """
-            for job in deadline_jobs[:5]:
+            for job in upcoming_jobs[:5]: # 최대 5개
+                html += f'<li><a href="{job["link"]}">{job["title"]}</a> - {job["company"]}</li>'
+            if len(upcoming_jobs) > 5:
+                html += f'<li>... 외 {len(upcoming_jobs) - 5}건</li>'
+            html += "</ul></div>"
+
+        # 2. 오늘 마감 (Urgent)
+        if today_jobs:
+            html += f"""
+            <div style="background: #FEE2E2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h3 style="color: #DC2626; margin: 0;">🚨 긴급: 오늘 마감 ({len(today_jobs)}건)</h3>
+                <ul>
+            """
+            for job in today_jobs[:5]:
                 html += f'<li><a href="{job["link"]}">{job["title"]}</a> - {job["company"]}</li>'
             html += "</ul></div>"
         
-        # 카테고리별 공고가 있으면 표시
+        # 3. 신규 공고
         if category_jobs:
             html += f"""
             <div style="background: #EEF2FF; padding: 15px; border-radius: 8px; margin: 15px 0;">
@@ -213,7 +246,7 @@ class Notifier:
             if len(category_jobs) > 10:
                 html += f'<li>... 외 {len(category_jobs) - 10}건</li>'
             html += "</ul></div>"
-        else:
+        elif new_jobs_count > 0:
             html += f"""
             <div style="background: #ECFDF5; padding: 15px; border-radius: 8px; margin: 15px 0;">
                 <h3 style="color: #059669; margin: 0;">✨ 신규 발견 공고: {new_jobs_count}건</h3>
@@ -224,17 +257,14 @@ class Notifier:
             <a href="{page_url}" style="display: inline-block; background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; margin-top: 20px;">
                 전체 공고 및 AI 자소서 전략 보러가기 →
             </a>
-            
-            <p style="color: #9CA3AF; margin-top: 30px; font-size: 12px;">
-                Job Scout AI가 자동으로 발송한 이메일입니다.
-            </p>
+            <p style="color: #9CA3AF; margin-top: 30px; font-size: 12px;">Job Scout AI가 자동으로 발송한 이메일입니다.</p>
         </body>
         </html>
         """
         
         try:
             msg = MIMEMultipart('alternative')
-            msg['Subject'] = f"[Job Scout] {subject_prefix} 오늘의 채용 브리핑 - 신규 {new_jobs_count}건"
+            msg['Subject'] = f"[Job Scout] {subject_prefix} 오늘의 채용 브리핑"
             msg['From'] = self.gmail_user
             msg['To'] = ', '.join(to_emails)
             
@@ -248,3 +278,4 @@ class Notifier:
             print(f"✅ Gmail 알림 발송 완료{category_info} ({len(to_emails)}명)")
         except Exception as e:
             print(f"❌ Gmail 발송 실패: {e}")
+```
