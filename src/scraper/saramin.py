@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import random
+import re
+from datetime import datetime, timedelta
 
 class SaraminScraper:
     BASE_URL = "https://www.saramin.co.kr/zf_user/search/recruit"
@@ -44,7 +46,7 @@ class SaraminScraper:
                             title = title_tag.text.strip()
                             company = company_tag.text.strip()
                             link = "https://www.saramin.co.kr" + title_tag['href']
-                            deadline = date_tag.text.strip() # needs parsing later
+                            deadline = self._convert_deadline(date_tag.text.strip())
                             
                             results.append({
                                 "id": f"saramin_{job_id}",
@@ -66,6 +68,28 @@ class SaraminScraper:
                 print(f"Error scraping Saramin for {keyword}: {e}")
                 
         return results
+
+    def _convert_deadline(self, text):
+        """마감일을 절대 날짜로 변환"""
+        today = datetime.now()
+        tomorrow = today + timedelta(days=1)
+
+        # 오늘마감 → 실제 날짜로 변환
+        if '오늘' in text:
+            return today.strftime('%m/%d') + ' 마감'
+
+        # 내일마감 → 실제 날짜로 변환
+        if '내일' in text:
+            return tomorrow.strftime('%m/%d') + ' 마감'
+
+        # D-숫자 패턴
+        d_match = re.search(r'D-(\d+)', text)
+        if d_match:
+            days = int(d_match.group(1))
+            target = today + timedelta(days=days)
+            return target.strftime('%m/%d') + ' 마감'
+
+        return text
 
     def get_details(self, url):
         # Implementation for getting full text will be needed for AI Summary

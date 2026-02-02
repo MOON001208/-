@@ -18,10 +18,16 @@ class DeadlineChecker:
             today = datetime.now()
             
             # 텍스트 키워드 체크
+            # "오늘마감", "내일마감" 텍스트가 그대로 저장되어 있다면
+            # 스크래핑 시점에 변환되지 않은 구 데이터임
+            # → 이미 지난 것으로 처리 (어제/그저께 날짜 반환)
             if '오늘' in deadline_str or 'today' in deadline_str.lower():
-                return today.date()
+                # 정상 데이터는 "02/02 마감" 형태로 저장됨
+                # "오늘마감" 텍스트 그대로면 과거 데이터 → 어제로 처리
+                return (today - timedelta(days=1)).date()
             if '내일' in deadline_str or 'tomorrow' in deadline_str.lower():
-                return (today + timedelta(days=1)).date()
+                # "내일마감" 텍스트 그대로면 과거 데이터 → 오늘로 처리 (이미 지남)
+                return today.date()
             
             # 구분자 통일: / 와 - 를 . 으로 변환
             normalized = deadline_str.replace('/', '.').replace('-', '.')
