@@ -42,15 +42,26 @@
     <script defer>
         // 카테고리 키워드 매핑 (config.py와 동일)
         const CATEGORY_KEYWORDS = {
-            "Data": ["데이터 분석", "data analyst", "데이터 엔지니어", "data scientist", "머신러닝", "ai"],
+            "Data": ["데이터 분석", "data analyst", "데이터 엔지니어", "data scientist", "머신러닝", "ai", "AI AGENT"],
             "Accounting": ["회계", "재무", "세무", "결산"],
             "HR": ["인사", "hrm", "hrd", "총무", "채용"]
         };
 
         let allJobs = [];
         let currentCategory = 'all';
+        let currentPlatform = 'all';
         let showOnlyDeadlineToday = false;
         let showOnlyNew = false;
+
+        // 플랫폼 목록 (site 필드 기준)
+        const PLATFORMS = {
+            'all': { name: '전체', icon: '🌐' },
+            'JobKorea': { name: '잡코리아', icon: '🟦' },
+            'Linkareer': { name: '링커리어', icon: '🟩' },
+            'Incruit': { name: '인크루트', icon: '🟧' },
+            'Saramin': { name: '사람인', icon: '🟥' },
+            'Wanted': { name: '원티드', icon: '🟪' }
+        };
 
         async function loadJobs() {
             try {
@@ -68,6 +79,11 @@
                     showOnlyDeadlineToday = true;
                 } else if (filterParam === 'new') {
                     showOnlyNew = true;
+                }
+
+                const platformParam = urlParams.get('platform');
+                if (platformParam) {
+                    currentPlatform = platformParam;
                 }
 
                 renderJobs(allJobs);
@@ -143,6 +159,23 @@
             updateStats();
         }
 
+        function filterByPlatform(platform) {
+            currentPlatform = platform;
+
+            // URL 업데이트
+            const url = new URL(window.location);
+            if (platform === 'all') {
+                url.searchParams.delete('platform');
+            } else {
+                url.searchParams.set('platform', platform);
+            }
+            window.history.pushState({}, '', url);
+
+            renderJobs(allJobs);
+            updateFilterButtons();
+            updateStats();
+        }
+
         function updateFilterButtons() {
             // 카테고리 버튼 업데이트
             document.querySelectorAll('.filter-btn[data-category]').forEach(btn => {
@@ -191,6 +224,18 @@
                     newBtn.classList.add('bg-gray-200', 'text-gray-700');
                 }
             }
+
+            // 플랫폼 버튼 업데이트
+            document.querySelectorAll('.filter-btn[data-platform]').forEach(btn => {
+                const btnPlatform = btn.dataset.platform;
+                if (btnPlatform === currentPlatform) {
+                    btn.classList.add('active', 'bg-indigo-600', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                } else {
+                    btn.classList.remove('active', 'bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
         }
 
         function updateStats() {
@@ -219,6 +264,11 @@
             // 오늘 마감 필터 적용
             if (showOnlyDeadlineToday) {
                 filteredJobs = filteredJobs.filter(job => checkDeadline(job.deadline));
+            }
+
+            // 플랫폼 필터 적용
+            if (currentPlatform !== 'all') {
+                filteredJobs = filteredJobs.filter(job => job.site === currentPlatform);
             }
 
             // 신규 필터 적용
@@ -374,6 +424,35 @@
             <button onclick="toggleNewFilter()" id="btn-new"
                 class="filter-btn px-5 py-2.5 rounded-full font-medium shadow-sm hover:shadow-md bg-gray-200 text-gray-700">
                 ✨ 신규
+            </button>
+        </div>
+
+        <!-- 플랫폼 필터 버튼 -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <span class="text-gray-500 text-sm mr-2 self-center">플랫폼:</span>
+            <button onclick="filterByPlatform('all')" data-platform="all"
+                class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md bg-indigo-600 text-white">
+                🌐 전체
+            </button>
+            <button onclick="filterByPlatform('JobKorea')" data-platform="JobKorea"
+                class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md bg-gray-200 text-gray-700">
+                🟦 잡코리아
+            </button>
+            <button onclick="filterByPlatform('Linkareer')" data-platform="Linkareer"
+                class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md bg-gray-200 text-gray-700">
+                🟩 링커리어
+            </button>
+            <button onclick="filterByPlatform('Incruit')" data-platform="Incruit"
+                class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md bg-gray-200 text-gray-700">
+                🟧 인크루트
+            </button>
+            <button onclick="filterByPlatform('Saramin')" data-platform="Saramin"
+                class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md bg-gray-200 text-gray-700">
+                🟥 사람인
+            </button>
+            <button onclick="filterByPlatform('Wanted')" data-platform="Wanted"
+                class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md bg-gray-200 text-gray-700">
+                🟪 원티드
             </button>
         </div>
 
