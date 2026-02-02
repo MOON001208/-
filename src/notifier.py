@@ -278,4 +278,4 @@ class Notifier:
             print(f"✅ Gmail 알림 발송 완료{category_info} ({len(to_emails)}명)")
         except Exception as e:
             print(f"❌ Gmail 발송 실패: {e}")
-```
+
