@@ -1,5 +1,125 @@
 [
   {
+    "id": "saramin_54204395",
+    "site": "Saramin",
+    "title": "[씨드앤] R&D 인턴",
+    "company": "(주)씨드앤",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54204395&location=ts&searchword=AI+AGENT&searchType=search&paid_fl=n&search_uuid=f99ae9ef-51b5-425e-93f2-e832ae2b9601",
+    "deadline": "~ 07/13(월)",
+    "hidden_keyword": "AI AGENT",
+    "scraped_at": "2026-07-01T23:07:16.538081",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54268946",
+    "site": "Saramin",
+    "title": "신입사원 채용(코딩테스트_CRM 시스템)",
+    "company": "현대오토에버(주)",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54268946&location=ts&searchword=AI+AGENT&searchType=search&paid_fl=n&search_uuid=9256d261-3ca2-450c-9145-fdb505097972",
+    "deadline": "~ 07/13(월)",
+    "hidden_keyword": "AI AGENT",
+    "scraped_at": "2026-06-24T23:07:58.408957",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54246632",
+    "site": "Saramin",
+    "title": "전략기획팀 경영관리/ESG 신입 채용",
+    "company": "신흥에스이씨(주)",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54246632&location=ts&searchword=Data+Analyst&searchType=search&paid_fl=n&search_uuid=cf4c999f-d7bd-4588-9aba-78f974c7baaf",
+    "deadline": "~ 07/13(월)",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-06-23T23:04:28.219682",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "wanted_369224",
+    "site": "Wanted",
+    "title": "Bilingual AI Conversation Associate",
+    "company": "다이얼로그디자인에이전시",
+    "link": "https://www.wanted.co.kr/wd/369224",
+    "deadline": "2026-07-13",
+    "hidden_keyword": "총무",
+    "scraped_at": "2026-06-17T23:22:42.464292",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_53891729",
+    "site": "Saramin",
+    "title": "치과기공소 사무직(총무·사무) 경력 채용 공고",
+    "company": "로이스치과기공소",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=53891729&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=81f37070-5449-484c-9582-1eac2bad077d",
+    "deadline": "~ 07/13(월)",
+    "hidden_keyword": "총무",
+    "scraped_at": "2026-05-16T22:41:30.479921",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_53887698",
+    "site": "Saramin",
+    "title": "(주)에버그린코리아 - 감리부(총무) 정규직",
+    "company": "(주)에버그린코리아",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=53887698&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=ed5a5caa-3b9b-40f9-a25e-c837a41795f0",
+    "deadline": "~ 07/13(월)",
+    "hidden_keyword": "총무",
+    "scraped_at": "2026-05-14T22:56:46.624736",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "wanted_354629",
+    "site": "Wanted",
+    "title": "교육 운영 매니저(PM)",
+    "company": "라이즌",
+    "link": "https://www.wanted.co.kr/wd/354629",
+    "deadline": "2026-07-13",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-04-13T22:41:04.251119",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "wanted_354632",
+    "site": "Wanted",
+    "title": "CS 매니저",
+    "company": "라이즌",
+    "link": "https://www.wanted.co.kr/wd/354632",
+    "deadline": "2026-07-13",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-04-13T22:41:04.250914",
+    "is_new": false,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
     "id": "saramin_54376503",
     "site": "Saramin",
     "title": "[GS네트웍스] '26년 물류센타 현장 피킹 인턴 채용",
@@ -495,195 +615,435 @@
     }
   },
   {
-    "id": "saramin_54148689",
-    "site": "Saramin",
-    "title": "SECO 서진산업 광주공장 생산 정규직 채용 - 공무반(전기)",
-    "company": "서진산업(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54148689&location=ts&searchword=%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e53074c4-3ff0-4ba7-b641-b77fee21cbd6",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "채용",
-    "scraped_at": "2026-06-14T23:04:55.564701",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54150309",
-    "site": "Saramin",
-    "title": "회계법인 기장팀 신입직원을 모집합니다",
-    "company": "대현회계법인",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54150309&location=ts&searchword=%ED%9A%8C%EA%B3%84&searchType=search&paid_fl=n&search_uuid=6d9b2493-3bd0-414b-a51d-0b24781e3fa9",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "회계",
-    "scraped_at": "2026-06-13T22:59:08.672922",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54143515",
-    "site": "Saramin",
-    "title": "관리팀 신입사원 모집 ( 회계,총무)",
-    "company": "마이크로컴퍼지트(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54143515&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=c5f1272d-56b6-46cb-b0ef-d48cff59d525",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "총무",
-    "scraped_at": "2026-06-12T23:12:58.257072",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54147965",
-    "site": "Saramin",
-    "title": "세무법인 정규직 채용공고 (신입)",
-    "company": "세무법인한결세무그룹",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54147965&location=ts&searchword=%EC%84%B8%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=beb194a3-cf36-434d-b0a1-e74f2556fa2b",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "세무",
-    "scraped_at": "2026-06-12T23:12:58.253434",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54145432",
-    "site": "Saramin",
-    "title": "[비나우] [전환형 인턴] 매출결산 및 영업지원 전임직 채용",
-    "company": "(주)비나우",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54145432&location=ts&searchword=%EA%B2%B0%EC%82%B0&searchType=search&paid_fl=n&search_uuid=211e1388-8f65-4533-93d8-7d6a69180152",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "결산",
-    "scraped_at": "2026-06-11T23:19:55.554207",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54144033",
-    "site": "Saramin",
-    "title": "[그레이스클럽] 마케팅팀 신입 채용",
-    "company": "(주)그레이스클럽",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54144033&location=ts&searchword=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D&searchType=search&paid_fl=n&search_uuid=e368d04b-6eae-4995-a84a-3014dcead4c7",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "머신러닝",
-    "scraped_at": "2026-06-11T23:19:55.552755",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54150429",
-    "site": "Saramin",
-    "title": "음성 AI 평가 스페셜리스트 - 한국어(재택)",
-    "company": "에스디엘(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54150429&location=ts&searchword=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D&searchType=search&paid_fl=n&search_uuid=e368d04b-6eae-4995-a84a-3014dcead4c7",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "머신러닝",
-    "scraped_at": "2026-06-11T23:19:55.552087",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54149406",
-    "site": "Saramin",
-    "title": "백앤드(인프라) 경력 채용공고(솔루션 개발)",
-    "company": "(주)와이즈인컴퍼니",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54149406&location=ts&searchword=%EB%8D%B0%EC%9D%B4%ED%84%B0+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4&searchType=search&paid_fl=n&search_uuid=8e46c16d-d1db-4ad4-b56c-131d37cf5970",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "데이터 엔지니어",
-    "scraped_at": "2026-06-11T23:19:55.549513",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54142821",
-    "site": "Saramin",
-    "title": "한국파라마운트(주) 회계·총무지원 신입 채용 공고",
-    "company": "한국파라마운트(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54142821&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=53f67626-583c-4d78-8c50-ea871168706a",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "총무",
-    "scraped_at": "2026-06-11T23:19:55.548093",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54144312",
-    "site": "Saramin",
-    "title": "[피크타임 여행사] 경영지원 인사/총무 신입 채용",
-    "company": "(주)피스오브크리에이티브",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54144312&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=53f67626-583c-4d78-8c50-ea871168706a",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "총무",
-    "scraped_at": "2026-06-11T23:19:55.547770",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_53859567",
-    "site": "Saramin",
-    "title": "[부산](주)온비치 경영관리팀-업무지원파트(정규직) 채용",
-    "company": "(주)온비치",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=53859567&location=ts&searchword=%EB%8D%B0%EC%9D%B4%ED%84%B0+%EB%B6%84%EC%84%9D&searchType=search&paid_fl=n&search_uuid=943745fe-7818-425a-a0c4-065fbc41bd59",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "데이터 분석",
-    "scraped_at": "2026-05-13T23:03:00.857676",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_53863195",
-    "site": "Saramin",
-    "title": "빛깔(주) 정규직 모집 공고 (재무회계팀)",
-    "company": "빛깔(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=53863195&location=ts&searchword=%ED%9A%8C%EA%B3%84&searchType=search&paid_fl=n&search_uuid=75d4d21d-bba5-4871-8463-ae2a7336804f",
-    "deadline": "~ 07/11(토)",
-    "hidden_keyword": "회계",
-    "scraped_at": "2026-05-12T23:01:07.186946",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "wanted_360658",
+    "id": "wanted_374191",
     "site": "Wanted",
-    "title": "연구기획 매니저",
-    "company": "에스디티",
-    "link": "https://www.wanted.co.kr/wd/360658",
-    "deadline": "2026-07-11",
+    "title": "해외 소싱 및 글로벌 브랜드 커뮤니케이션 담당 매니저",
+    "company": "온누리아이코리아",
+    "link": "https://www.wanted.co.kr/wd/374191",
+    "deadline": "",
+    "hidden_keyword": "회계",
+    "scraped_at": "2026-07-12T22:43:01.922314",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "incruit_2607080002222",
+    "site": "Incruit",
+    "title": "[생성형 AI 플랫폼 개발기업] 생성형 AI 플랫폼 및 에이전트 개발 풀스택개발자 경력인재 채용",
+    "company": "확인필요",
+    "link": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2607080002222&src=gsw*etc",
+    "deadline": "",
+    "hidden_keyword": "AI AGENT",
+    "scraped_at": "2026-07-12T22:42:59.567494",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "incruit_2607090000036",
+    "site": "Incruit",
+    "title": "컨텐츠플랫폼 개발 팀장",
+    "company": "확인필요",
+    "link": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2607090000036&src=gsw*etc",
+    "deadline": "",
+    "hidden_keyword": "AI AGENT",
+    "scraped_at": "2026-07-12T22:42:59.397398",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "incruit_2607100002138",
+    "site": "Incruit",
+    "title": "하나증권 신탁운용실 경럭직 채용",
+    "company": "확인필요",
+    "link": "https://job.incruit.com/jobdb_info/jobpost.asp?job=2607100002138&src=gsw*etc",
+    "deadline": "",
+    "hidden_keyword": "세무",
+    "scraped_at": "2026-07-12T22:42:56.487153",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49399659",
+    "site": "JobKorea",
+    "title": "(주)마음에이아이 Technical Sales & Strategy Staff",
+    "company": "㈜마음에이아이",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49399659?Oem_Code=C1&logpath=1&stext=AI&listno=19&sc=630",
+    "deadline": "",
+    "hidden_keyword": "AI",
+    "scraped_at": "2026-07-12T22:42:53.919143",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49547437",
+    "site": "JobKorea",
+    "title": "[클립아트코리아] 대외협력실 영업팀 신입사원 모집",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49547437?Oem_Code=C1&logpath=1&stext=%EB%8D%B0%EC%9D%B4%ED%84%B0+%EB%B6%84%EC%84%9D&listno=19&sc=630",
+    "deadline": "",
+    "hidden_keyword": "데이터 분석",
+    "scraped_at": "2026-07-12T22:42:53.884923",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49559945",
+    "site": "JobKorea",
+    "title": "[나인트리 바이 파르나스] 호텔 인사총무팀 총무담당 신입 채용",
+    "company": "㈜피앤에쓰",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49559945?Oem_Code=C1&logpath=1&stext=%EC%B4%9D%EB%AC%B4&listno=18&sc=630",
+    "deadline": "",
+    "hidden_keyword": "총무",
+    "scraped_at": "2026-07-12T22:42:53.821609",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49447018",
+    "site": "JobKorea",
+    "title": "당신의 가능성을 펼쳐보세요",
+    "company": "㈜입찰법인연",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49447018?Oem_Code=C1&logpath=1&stext=Data+Analyst&listno=20&sc=630",
+    "deadline": "",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-07-12T22:42:53.694791",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49533589",
+    "site": "JobKorea",
+    "title": "데이터 분석 및 AI 모델 개발 채용",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49533589?Oem_Code=C1&logpath=1&stext=Data+Analyst&listno=19&sc=630",
+    "deadline": "",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-07-12T22:42:53.694463",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49506136",
+    "site": "JobKorea",
+    "title": "AI 데이터셋 구축 라벨러 (계약직)",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49506136?Oem_Code=C1&logpath=1&stext=Data+Analyst&listno=18&sc=630",
+    "deadline": "",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-07-12T22:42:53.681275",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49255217",
+    "site": "JobKorea",
+    "title": "데이터 분석, 공공데이터 품질 관리",
+    "company": "㈜아이티어바웃",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49255217?Oem_Code=C1&logpath=1&stext=Data+Analyst&listno=15&sc=630",
+    "deadline": "",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-07-12T22:42:53.671800",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49545965",
+    "site": "JobKorea",
+    "title": "[포르쉐 공식딜러] 아우토슈타트㈜ 각 부문별 채용",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49545965?Oem_Code=C1&logpath=1&stext=HRM&listno=18&sc=630",
+    "deadline": "",
+    "hidden_keyword": "HRM",
+    "scraped_at": "2026-07-12T22:42:53.600272",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49544145",
+    "site": "JobKorea",
+    "title": "[People팀] HRBP",
+    "company": "㈜아이샵케어",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49544145?Oem_Code=C1&logpath=1&stext=HRM&listno=1&sc=552",
+    "deadline": "",
+    "hidden_keyword": "HRM",
+    "scraped_at": "2026-07-12T22:42:53.573689",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49490031",
+    "site": "JobKorea",
+    "title": "[People팀] 급여 담당자 (Payroll)",
+    "company": "㈜아이샵케어",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49490031?Oem_Code=C1&logpath=1&stext=HRM&listno=1&sc=551",
+    "deadline": "",
+    "hidden_keyword": "HRM",
+    "scraped_at": "2026-07-12T22:42:53.573340",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49502893",
+    "site": "JobKorea",
+    "title": "세무신고,기장,4대보험 관련",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49502893?Oem_Code=C1&logpath=1&stext=%EC%84%B8%EB%AC%B4&listno=20&sc=630",
+    "deadline": "",
+    "hidden_keyword": "세무",
+    "scraped_at": "2026-07-12T22:42:53.572937",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49410931",
+    "site": "JobKorea",
+    "title": "[알펜시아리조트] 재무회계팀 영업회계 정규직 사원 모집",
+    "company": "㈜알펜시아",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49410931?Oem_Code=C1&logpath=1&stext=%ED%9A%8C%EA%B3%84&listno=20&sc=630",
+    "deadline": "",
+    "hidden_keyword": "회계",
+    "scraped_at": "2026-07-12T22:42:53.524047",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49542522",
+    "site": "JobKorea",
+    "title": "해외자회사 회계 채용 (계약직)",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49542522?Oem_Code=C1&logpath=1&stext=%ED%9A%8C%EA%B3%84&listno=17&sc=630",
+    "deadline": "",
+    "hidden_keyword": "회계",
+    "scraped_at": "2026-07-12T22:42:53.523596",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "jk_49557470",
+    "site": "JobKorea",
+    "title": "2026년 CR그룹 신입/경력 공개채용(CR홀딩스/조선내화/CRI)",
+    "company": "스크랩",
+    "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/49557470?Oem_Code=C1&logpath=1&stext=%ED%9A%8C%EA%B3%84&listno=7&sc=630",
+    "deadline": "",
+    "hidden_keyword": "회계",
+    "scraped_at": "2026-07-12T22:42:53.478513",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54393209",
+    "site": "Saramin",
+    "title": "AI Research Engineer (Vision & NLP)",
+    "company": "코드비전(주)",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54393209&location=ts&searchword=AI+AGENT&searchType=search&paid_fl=n&search_uuid=781083e4-2a8f-4997-911c-fa2c35bd4e6a",
+    "deadline": "~ 08/06(목)",
+    "hidden_keyword": "AI AGENT",
+    "scraped_at": "2026-07-12T22:42:53.445103",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54291998",
+    "site": "Saramin",
+    "title": "에이아이티스토리 AI 개발자 (LLM, M/L) 채용 (신입)",
+    "company": "에이아이티스토리(주)",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54291998&location=ts&searchword=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D&searchType=search&paid_fl=n&search_uuid=a556c494-94e6-4309-9ed7-9829e39ea98d",
+    "deadline": "~ 07/26(일)",
+    "hidden_keyword": "머신러닝",
+    "scraped_at": "2026-07-12T22:42:53.444088",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54430276",
+    "site": "Saramin",
+    "title": "[신입] 반도체 CMP설비 평가 생산직 모집(동탄)",
+    "company": "(주)케이씨텍",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54430276&location=ts&searchword=%EB%8D%B0%EC%9D%B4%ED%84%B0+%EB%B6%84%EC%84%9D&searchType=search&paid_fl=n&search_uuid=47dec2df-ec51-4096-a928-c9d7f8c12ec3",
+    "deadline": "~ 07/19(일)",
+    "hidden_keyword": "데이터 분석",
+    "scraped_at": "2026-07-12T22:42:53.443111",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54393367",
+    "site": "Saramin",
+    "title": "[NAVER Cloud] 공공 및 민간 사업 지원 (체험형 인턴)",
+    "company": "네이버클라우드(주)",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54393367&location=ts&searchword=%EB%8D%B0%EC%9D%B4%ED%84%B0+%EB%B6%84%EC%84%9D&searchType=search&paid_fl=n&search_uuid=47dec2df-ec51-4096-a928-c9d7f8c12ec3",
+    "deadline": "~ 07/15(수)",
+    "hidden_keyword": "데이터 분석",
+    "scraped_at": "2026-07-12T22:42:53.442578",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54172679",
+    "site": "Saramin",
+    "title": "[여의도/투자자문사] 경영지원팀 인턴 채용 - 정규직 전환 가능",
+    "company": "(주)폴라리스투자자문",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54172679&location=ts&searchword=%EA%B2%B0%EC%82%B0&searchType=search&paid_fl=n&search_uuid=e0c048c5-132d-46e9-8047-7c725eefc104",
+    "deadline": "~ 07/16(목)",
     "hidden_keyword": "결산",
-    "scraped_at": "2026-05-11T22:50:57.423899",
-    "is_new": false,
+    "scraped_at": "2026-07-12T22:42:53.441605",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54172693",
+    "site": "Saramin",
+    "title": "[투자자문사] 경영지원팀 신입사원 채용 (급여공개) - 정규직",
+    "company": "(주)폴라리스투자자문",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54172693&location=ts&searchword=HRD&searchType=search&paid_fl=n&search_uuid=ca8ae501-4ace-4397-a275-7fb82a416bea",
+    "deadline": "~ 07/16(목)",
+    "hidden_keyword": "HRD",
+    "scraped_at": "2026-07-12T22:42:53.440650",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54392661",
+    "site": "Saramin",
+    "title": "(주)심텍 제조기술 신입 채용",
+    "company": "(주)심텍",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54392661&location=ts&searchword=%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=8b36957f-811c-48d4-9913-d68c40160d9d",
+    "deadline": "~ 08/06(목)",
+    "hidden_keyword": "채용",
+    "scraped_at": "2026-07-12T22:42:53.440064",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54397005",
+    "site": "Saramin",
+    "title": "[신입] 제조직(Operator) 기간제 채용 (3교대, 야간고정)",
+    "company": "앰코테크놀로지코리아㈜",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54397005&location=ts&searchword=%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=8b36957f-811c-48d4-9913-d68c40160d9d",
+    "deadline": "~ 07/19(일)",
+    "hidden_keyword": "채용",
+    "scraped_at": "2026-07-12T22:42:53.439706",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54383380",
+    "site": "Saramin",
+    "title": "[한화토탈에너지스] 2026년 1차 전문직 신입사원 채용",
+    "company": "한화토탈에너지스(주)",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54383380&location=ts&searchword=%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=8b36957f-811c-48d4-9913-d68c40160d9d",
+    "deadline": "~ 07/19(일)",
+    "hidden_keyword": "채용",
+    "scraped_at": "2026-07-12T22:42:53.439360",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54394501",
+    "site": "Saramin",
+    "title": "기능직 신입사원 채용",
+    "company": "(주)E1",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54394501&location=ts&searchword=%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=8b36957f-811c-48d4-9913-d68c40160d9d",
+    "deadline": "~ 07/19(일)",
+    "hidden_keyword": "채용",
+    "scraped_at": "2026-07-12T22:42:53.439052",
+    "is_new": true,
+    "ai_analysis": {
+      "summary": "분석 실패",
+      "strategy": "AI 호출 중 오류가 발생했습니다."
+    }
+  },
+  {
+    "id": "saramin_54404195",
+    "site": "Saramin",
+    "title": "2026년 하반기 신입/인턴 채용(RA, 해외영업, 생산관리)",
+    "company": "주식회사 삼양케이씨아이",
+    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54404195&location=ts&searchword=Data+Analyst&searchType=search&paid_fl=n&search_uuid=d332a26c-c560-4a59-a717-f4cc7ecbfb25",
+    "deadline": "~ 07/19(일)",
+    "hidden_keyword": "Data Analyst",
+    "scraped_at": "2026-07-12T22:42:53.438130",
+    "is_new": true,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -698,7 +1058,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:47.821724",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -713,7 +1073,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:47.653697",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -728,7 +1088,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:47.505057",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -743,7 +1103,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:47.325696",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -758,7 +1118,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:47.238769",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -773,7 +1133,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:47.143504",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -788,7 +1148,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:46.473753",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -803,7 +1163,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:46.215176",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -818,7 +1178,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:45.944631",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -833,7 +1193,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:45.764247",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -848,7 +1208,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:45.636114",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -863,7 +1223,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:45.479676",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -878,7 +1238,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:45.037600",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -893,7 +1253,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:44.731239",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -908,7 +1268,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:44.317599",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -923,7 +1283,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:44.227714",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -938,7 +1298,7 @@
     "deadline": "",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:44.139669",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -953,7 +1313,7 @@
     "deadline": "",
     "hidden_keyword": "재무",
     "scraped_at": "2026-07-11T22:43:42.143418",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -968,7 +1328,7 @@
     "deadline": "",
     "hidden_keyword": "재무",
     "scraped_at": "2026-07-11T22:43:41.951750",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -983,7 +1343,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:41.209205",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -998,7 +1358,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:40.531192",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1013,7 +1373,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:40.330379",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1028,7 +1388,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:39.899822",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1043,7 +1403,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:39.097352",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1058,7 +1418,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:39.014820",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1073,7 +1433,7 @@
     "deadline": "",
     "hidden_keyword": "HRM",
     "scraped_at": "2026-07-11T22:43:38.829799",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1088,7 +1448,7 @@
     "deadline": "REJECTED",
     "hidden_keyword": "총무",
     "scraped_at": "2026-07-11T22:43:38.673840",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1103,7 +1463,7 @@
     "deadline": "REJECTED",
     "hidden_keyword": "채용",
     "scraped_at": "2026-07-11T22:43:38.673471",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1118,7 +1478,7 @@
     "deadline": "",
     "hidden_keyword": "세무",
     "scraped_at": "2026-07-11T22:43:38.518941",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1133,7 +1493,7 @@
     "deadline": "",
     "hidden_keyword": "AI AGENT",
     "scraped_at": "2026-07-11T22:43:38.441378",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1148,7 +1508,7 @@
     "deadline": "",
     "hidden_keyword": "AI AGENT",
     "scraped_at": "2026-07-11T22:43:38.440999",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1163,7 +1523,7 @@
     "deadline": "",
     "hidden_keyword": "총무",
     "scraped_at": "2026-07-11T22:43:38.300435",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1178,7 +1538,7 @@
     "deadline": "~ 07/23(목)",
     "hidden_keyword": "결산",
     "scraped_at": "2026-07-11T22:43:38.284150",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1193,7 +1553,7 @@
     "deadline": "~ 07/17(금)",
     "hidden_keyword": "결산",
     "scraped_at": "2026-07-11T22:43:38.283593",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1208,7 +1568,7 @@
     "deadline": "~ 07/15(수)",
     "hidden_keyword": "결산",
     "scraped_at": "2026-07-11T22:43:38.282940",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1223,7 +1583,7 @@
     "deadline": "~ 07/19(일)",
     "hidden_keyword": "회계",
     "scraped_at": "2026-07-11T22:43:38.282097",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1238,7 +1598,7 @@
     "deadline": "~ 09/08(화)",
     "hidden_keyword": "회계",
     "scraped_at": "2026-07-11T22:43:38.281775",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -1253,7 +1613,7 @@
     "deadline": "~ 07/20(월)",
     "hidden_keyword": "총무",
     "scraped_at": "2026-07-11T22:43:38.277226",
-    "is_new": true,
+    "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
       "strategy": "AI 호출 중 오류가 발생했습니다."
@@ -12705,21 +13065,6 @@
     }
   },
   {
-    "id": "saramin_54204395",
-    "site": "Saramin",
-    "title": "[씨드앤] R&D 인턴",
-    "company": "(주)씨드앤",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54204395&location=ts&searchword=AI+AGENT&searchType=search&paid_fl=n&search_uuid=f99ae9ef-51b5-425e-93f2-e832ae2b9601",
-    "deadline": "~ 07/13(월)",
-    "hidden_keyword": "AI AGENT",
-    "scraped_at": "2026-07-01T23:07:16.538081",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
     "id": "saramin_54338253",
     "site": "Saramin",
     "title": "[글로벌 스킨케아 브랜드/메디필] Internal FDE(신입)",
@@ -19665,21 +20010,6 @@
     }
   },
   {
-    "id": "saramin_54268946",
-    "site": "Saramin",
-    "title": "신입사원 채용(코딩테스트_CRM 시스템)",
-    "company": "현대오토에버(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54268946&location=ts&searchword=AI+AGENT&searchType=search&paid_fl=n&search_uuid=9256d261-3ca2-450c-9145-fdb505097972",
-    "deadline": "~ 07/13(월)",
-    "hidden_keyword": "AI AGENT",
-    "scraped_at": "2026-06-24T23:07:58.408957",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
     "id": "saramin_54269983",
     "site": "Saramin",
     "title": "한국신광마이크로애랙트로닉스(주) 총무·인사·노무 신입 채용 공고",
@@ -21128,21 +21458,6 @@
     "deadline": "~ 08/22(토)",
     "hidden_keyword": "AI AGENT",
     "scraped_at": "2026-06-23T23:04:28.219971",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_54246632",
-    "site": "Saramin",
-    "title": "전략기획팀 경영관리/ESG 신입 채용",
-    "company": "신흥에스이씨(주)",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54246632&location=ts&searchword=Data+Analyst&searchType=search&paid_fl=n&search_uuid=cf4c999f-d7bd-4588-9aba-78f974c7baaf",
-    "deadline": "~ 07/13(월)",
-    "hidden_keyword": "Data Analyst",
-    "scraped_at": "2026-06-23T23:04:28.219682",
     "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
@@ -25523,21 +25838,6 @@
     "deadline": "",
     "hidden_keyword": "총무",
     "scraped_at": "2026-06-17T23:22:42.464587",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "wanted_369224",
-    "site": "Wanted",
-    "title": "Bilingual AI Conversation Associate",
-    "company": "다이얼로그디자인에이전시",
-    "link": "https://www.wanted.co.kr/wd/369224",
-    "deadline": "2026-07-13",
-    "hidden_keyword": "총무",
-    "scraped_at": "2026-06-17T23:22:42.464292",
     "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
@@ -56850,21 +57150,6 @@
     }
   },
   {
-    "id": "saramin_53891729",
-    "site": "Saramin",
-    "title": "치과기공소 사무직(총무·사무) 경력 채용 공고",
-    "company": "로이스치과기공소",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=53891729&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=81f37070-5449-484c-9582-1eac2bad077d",
-    "deadline": "~ 07/13(월)",
-    "hidden_keyword": "총무",
-    "scraped_at": "2026-05-16T22:41:30.479921",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
     "id": "wanted_361852",
     "site": "Wanted",
     "title": "치과 영업 담당자",
@@ -59378,21 +59663,6 @@
     "deadline": "",
     "hidden_keyword": "Data Analyst",
     "scraped_at": "2026-05-14T22:56:46.640251",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "saramin_53887698",
-    "site": "Saramin",
-    "title": "(주)에버그린코리아 - 감리부(총무) 정규직",
-    "company": "(주)에버그린코리아",
-    "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=53887698&location=ts&searchword=%EC%B4%9D%EB%AC%B4&searchType=search&paid_fl=n&search_uuid=ed5a5caa-3b9b-40f9-a25e-c837a41795f0",
-    "deadline": "~ 07/13(월)",
-    "hidden_keyword": "총무",
-    "scraped_at": "2026-05-14T22:56:46.624736",
     "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
@@ -89123,36 +89393,6 @@
     "deadline": "채용시",
     "hidden_keyword": "총무",
     "scraped_at": "2026-04-14T22:42:46.078327",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "wanted_354629",
-    "site": "Wanted",
-    "title": "교육 운영 매니저(PM)",
-    "company": "라이즌",
-    "link": "https://www.wanted.co.kr/wd/354629",
-    "deadline": "2026-07-13",
-    "hidden_keyword": "Data Analyst",
-    "scraped_at": "2026-04-13T22:41:04.251119",
-    "is_new": false,
-    "ai_analysis": {
-      "summary": "분석 실패",
-      "strategy": "AI 호출 중 오류가 발생했습니다."
-    }
-  },
-  {
-    "id": "wanted_354632",
-    "site": "Wanted",
-    "title": "CS 매니저",
-    "company": "라이즌",
-    "link": "https://www.wanted.co.kr/wd/354632",
-    "deadline": "2026-07-13",
-    "hidden_keyword": "Data Analyst",
-    "scraped_at": "2026-04-13T22:41:04.250914",
     "is_new": false,
     "ai_analysis": {
       "summary": "분석 실패",
