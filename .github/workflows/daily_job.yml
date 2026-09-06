@@ -33,6 +33,9 @@ jobs:
       run: |
         pip install -r requirements.txt
         
+    - name: Test job filtering
+      run: python -m unittest discover -s tests
+
     - name: Run Job Scout
       env:
         # AI 분석

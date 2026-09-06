@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import random
 import re
+from src.scraper.details import fetch_description
 
 class JobKoreaScraper:
     """
@@ -179,4 +180,4 @@ class JobKoreaScraper:
         return ""
 
     def get_details(self, url):
-        return ""
+        return fetch_description(url, 'JobKorea', self.headers, self.session)

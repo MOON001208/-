@@ -1,6 +1,7 @@
 import requests
 import time
 import random
+from src.scraper.details import fetch_description
 
 class WantedScraper:
     """
@@ -143,4 +144,4 @@ class WantedScraper:
             print(f"  Wanted fallback also failed: {e}")
 
     def get_details(self, url):
-        return ""
+        return fetch_description(url, 'Wanted', self.headers, self.session)

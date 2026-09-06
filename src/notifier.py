@@ -4,6 +4,7 @@ import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from src.config import Config
+from src.logic.job_relevance import get_job_category
 
 class Notifier:
     def __init__(self):
@@ -146,11 +147,9 @@ class Notifier:
         }
         
         for job in jobs:
-            keyword = job.get('hidden_keyword', '')
-            for category, keywords in Config.KEYWORDS.items():
-                if any(kw.lower() in keyword.lower() for kw in keywords):
-                    category_jobs[category].append(job)
-                    break
+            category = get_job_category(job)
+            if category in category_jobs:
+                category_jobs[category].append(job)
         
         # 카테고리별 수신자에게 발송
         for category, cat_jobs in category_jobs.items():
@@ -179,9 +178,7 @@ class Notifier:
             self.send_gmail_alert(len(jobs), today_jobs, upcoming_jobs, page_url, all_recipients)
 
     def _is_in_category(self, job, category):
-        keyword = job.get('hidden_keyword', '')
-        keywords = Config.KEYWORDS.get(category, [])
-        return any(kw.lower() in keyword.lower() for kw in keywords)
+        return get_job_category(job) == category
 
     def send_gmail_alert(self, new_jobs_count, today_jobs, upcoming_jobs, page_url, recipients=None, category_name=None, category_jobs=None):
         if not self.gmail_user or not self.gmail_app_password:

@@ -36,28 +36,32 @@ def main():
     scraped_jobs = scraper_manager.run_all()
     print(f"Scraped {len(scraped_jobs)} jobs.")
     
-    # 4. Filter New
+    # 4. 검색 결과뿐 아니라 기존 데이터 공고도 같은 제목/JD 기준으로 재검사한다.
+    scraped_jobs = DeadlineChecker.filter_active_jobs(scraped_jobs)
+    existing_jobs = DeadlineChecker.filter_active_jobs(existing_jobs)
+    # 이미 확보한 JD를 재사용하고 신규 공고부터 상세 조회 예산을 배정한다.
+    scraper_manager.detail_cache.update({
+        job['id']: job['description'] for job in existing_jobs if job.get('description')
+    })
+    existing_ids = {job['id'] for job in existing_jobs}
+    scraped_jobs.sort(key=lambda job: job['id'] in existing_ids)
+    scraped_jobs = scraper_manager.review_jobs(scraped_jobs)
+    existing_jobs = scraper_manager.review_jobs(existing_jobs)
     new_jobs = data_manager.filter_new_jobs(scraped_jobs, existing_jobs)
     print(f"Found {len(new_jobs)} new jobs.")
     
     # 5. AI Analysis (Only for new jobs to save cost/time)
     for i, job in enumerate(new_jobs):
         print(f"Analyzing {i+1}/{len(new_jobs)}: {job['title']}")
-        # Get Full Text (Scrapers need to implement get_details properly)
-        # For MVP, we might skip full text if scraper.get_details is empty
-        # or just pass title + company for a "Initial Strategy"
-        
-        # NOTE: Ideally we call scraper.get_details(job['link']) here
-        # But for speed in this demo, we might just analyze based on Title
-        job['ai_analysis'] = ai_agent.analyze_job(job['title'], job['title']) 
+        # 데이터 공고는 실제 JD로 분석한다. 본문을 못 읽으면 내용을 추측하지 않는다.
+        analysis_text = job.get('description', '') if job.get('category') == 'Data' else job['title']
+        job['ai_analysis'] = ai_agent.analyze_job(job['title'], analysis_text)
         
     # 6. Merge & Filter
     all_jobs = data_manager.merge_jobs(existing_jobs, new_jobs)
     
     # 기한이 지난 공고 자동 삭제
     print("\n🔍 Checking for expired jobs...")
-    all_jobs = DeadlineChecker.filter_active_jobs(all_jobs)
-    
     all_jobs = DeadlineChecker.filter_active_jobs(all_jobs)
     
     # Check deadlines

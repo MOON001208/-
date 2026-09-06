@@ -4,6 +4,7 @@ import time
 import random
 import urllib.parse
 import re
+from src.scraper.details import fetch_description
 
 class IncruitScraper:
     """
@@ -189,4 +190,4 @@ class IncruitScraper:
             print(f"  Incruit fallback failed: {e}")
 
     def get_details(self, url):
-        return ""
+        return fetch_description(url, 'Incruit', self.headers, self.session)

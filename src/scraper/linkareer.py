@@ -1,6 +1,8 @@
 import requests
 import time
 import random
+from src.scraper.details import fetch_description
+from src.logic.job_relevance import contains
 
 class LinkareerScraper:
     """
@@ -68,11 +70,13 @@ class LinkareerScraper:
 
                         # 키워드 매칭
                         matched_keyword = ""
-                        title_lower = title.lower()
                         for kw in keywords:
-                            if kw.lower() in title_lower:
+                            if contains(title, kw):
                                 matched_keyword = kw
                                 break
+
+                        if not matched_keyword:
+                            continue
 
                         link = f"https://linkareer.com/activity/{job_id}"
 
@@ -83,19 +87,20 @@ class LinkareerScraper:
                             "company": company,
                             "link": link,
                             "deadline": deadline if deadline else "",
-                            "hidden_keyword": matched_keyword or keywords[0] if keywords else ""
+                            "hidden_keyword": matched_keyword
                         })
                     except Exception as e:
                         continue
             else:
                 print(f"  Linkareer: HTTP {response.status_code}, trying fallback...")
-                self._fallback_search(keywords, results)
 
             time.sleep(random.uniform(1, 2))
 
         except Exception as e:
             print(f"Error scraping Linkareer: {e}")
-            self._fallback_search(keywords, results)
+
+        # 전체 목록 API는 검색이 아니므로 모든 직무의 키워드 검색도 수행한다.
+        self._fallback_search(keywords, results)
 
         # 중복 제거
         seen = set()
@@ -112,9 +117,8 @@ class LinkareerScraper:
         try:
             from bs4 import BeautifulSoup
 
-            for keyword in keywords[:3]:  # 처음 3개 키워드만
-                search_url = f"https://linkareer.com/list/recruit?filterBy_keyword={keyword}"
-                response = requests.get(search_url, headers=self.headers, timeout=10)
+            for keyword in keywords:
+                response = requests.get(self.BASE_URL, params={"filterBy_keyword": keyword}, headers=self.headers, timeout=10)
 
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, "html.parser")
@@ -184,4 +188,4 @@ class LinkareerScraper:
             print(f"Linkareer fallback failed: {e}")
 
     def get_details(self, url):
-        return ""
+        return fetch_description(url, 'Linkareer', self.headers)

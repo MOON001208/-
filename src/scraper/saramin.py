@@ -4,6 +4,7 @@ import time
 import random
 import re
 from datetime import datetime, timedelta
+from src.scraper.details import fetch_description
 
 class SaraminScraper:
     BASE_URL = "https://www.saramin.co.kr/zf_user/search/recruit"
@@ -29,7 +30,7 @@ class SaraminScraper:
                     "exp_none": 1  # 경력무관도 포함
                 }
                 
-                response = requests.get(self.BASE_URL, params=params, headers=self.headers)
+                response = requests.get(self.BASE_URL, params=params, headers=self.headers, timeout=15)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, "html.parser")
                     items = soup.select(".item_recruit")
@@ -92,13 +93,4 @@ class SaraminScraper:
         return text
 
     def get_details(self, url):
-        # Implementation for getting full text will be needed for AI Summary
-        # For now, we return empty string to avoid blocking
-        try:
-            response = requests.get(url, headers=self.headers)
-            soup = BeautifulSoup(response.text, "html.parser")
-            # This selector often changes, need to be generic
-            content = soup.select_one(".wrap_jv_cont")
-            return content.text.strip() if content else ""
-        except:
-            return ""
+        return fetch_description(url, 'Saramin', self.headers)

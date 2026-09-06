@@ -1,12 +1,25 @@
 import os
 
 class Config:
-    # 3 categories as requested
+    # 직무 검색어와 JD 평가 키워드는 분리한다. AI/SQL 등은 단독 검색하지 않는다.
     KEYWORDS = {
-        "Data": ["데이터 분석", "Data Analyst", "데이터 엔지니어", "Data Scientist", "머신러닝", "AI", "AI AGENT"],
+        "Data": [
+            "Data Analyst", "Product Data Analyst", "Business Data Analyst",
+            "Data Analytics Engineer", "Analytics Engineer", "Marketing Engineer",
+            "MarTech", "CRM Data Analyst", "CDP", "Customer Data Analyst",
+            "데이터 분석", "프로덕트 데이터 분석", "비즈니스 데이터 분석",
+            "애널리틱스 엔지니어", "마케팅 엔지니어", "마테크",
+            "CRM 데이터 분석", "고객 데이터 분석", "고객 데이터 플랫폼",
+        ],
         "Accounting": ["회계", "재무", "세무", "결산"],
         "HR": ["인사", "HRM", "HRD", "총무", "채용"]
     }
+
+    # 제목이 포괄적일 때는 JD의 관련 업무 + 서로 다른 키워드 2개 이상 필요.
+    DATA_MIN_JD_SIGNALS = 2
+    # 상세 페이지 장애가 전체 자동화를 지연시키지 않도록 실행당 조회를 제한.
+    DATA_DETAIL_LIMIT = 100
+    DATA_DETAIL_BUDGET_SECONDS = 300
     
     # Secrets (Environment Variables)
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
